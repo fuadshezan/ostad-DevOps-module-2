@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Checkout Code'){
+            steps{
+                git branch: 'main', credentialsId: '8dee9fea-1767-48d5-9a19-d2f266dfc3ef', url: 'git@github.com:fuadshezan/ostad-DevOps-module-2.git'
+            }
+        }
+        stage('Display content'){
+            steps{
+                // sh '''cat README.md'''
+                sh '''cat hello.txt'''
+            }
+        }
+    }
+}

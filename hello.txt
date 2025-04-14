@@ -1,2 +1,2 @@
 Hello from Jenkins!
-This is the updated data which has added after the firs run.
+This is the updated data which has added after the first run.
